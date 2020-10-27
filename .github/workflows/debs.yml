@@ -42,7 +42,7 @@ jobs:
       with:
         tag_name: build-${{ steps.gen_vars.outputs.tag_name }}
         release_name: DRAKVUF Sandbox Nightly ${{ steps.gen_vars.outputs.cur_datetime }} ${{ steps.gen_vars.outputs.short_sha }}
-        draft: false
+        draft: true
         prerelease: true
     - name: Store release URL as file (nightly)
       if: github.ref == 'refs/heads/master'
