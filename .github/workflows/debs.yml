@@ -38,11 +38,11 @@ jobs:
       uses: actions/create-release@v1
       id: create_release_nightly
       env:
-        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        owner: icedevml
-        repo: drakvuf-sandbox-nightly
-        commitish: main
+        #owner: icedevml
+        #repo: drakvuf-sandbox-nightly
+        commitish: master
         tag_name: build-${{ steps.gen_vars.outputs.tag_name }}
         release_name: DRAKVUF Sandbox Nightly ${{ steps.gen_vars.outputs.cur_datetime }} ${{ steps.gen_vars.outputs.short_sha }}
         draft: false
